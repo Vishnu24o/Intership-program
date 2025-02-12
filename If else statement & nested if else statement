@@ -1,0 +1,55 @@
+print('Welcome To Indala College Sports Event')
+
+a=input("Enter your Name : ")
+print('Thank you')
+
+b=input("Which Sports You are Looking For.? \n 1) cricket \n 2) carrom \n 3) kabbadi \n")
+
+if(b=="cricket"):
+    print('Go to big ground')
+elif(b=="carrom"):
+    print('Go to class no.03')
+elif(b=="kabbadi"):
+    print('Go to small ground')
+else:
+    print('No sports found')
+
+print(f"Thank You {a} \n All the best for {b}")
+
+nested if else statement//
+
+print('Welcome To Indala College Sports Event')
+
+a=input("Enter your Name : ")
+print('Thank you')
+
+b=input("Which Sports You are Looking For.? \n 1) cricket \n 2) carrom \n 3) kabbadi \n")
+
+if(b=="cricket"):
+    print('Go to big ground')
+    c=int(input("enter your age"))
+    if(c<=20):
+        print('you are in SECTION A')
+    else:
+        print('you are in SECTION B')           
+
+elif(b=="carrom"):
+    print('Go to class no.03')
+    c=int(input("enter your age"))
+    if(c<=20):
+        print('you are in SECTION C')
+    else:
+        print('you are in SECTION D') 
+
+elif(b=="kabbadi"):
+    print('Go to small ground')
+    c=int(input("enter your age"))
+    if(c<=20):
+        print('you are in SECTION E')
+    else:
+        print('you are in SECTION ') 
+
+else:
+    print('No sports found')
+
+print(f"Thank You {a} & All the best for {b}")
