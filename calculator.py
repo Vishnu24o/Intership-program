@@ -1,97 +1,44 @@
-title = "Python Based Simple Calculator"
-print(title.center(50, '-'))
+print("Enter a number: ")
+num1 = int(input())
+print("Enter another number: ")
+num2 = int(input())
+print("Select an operation to perform ->")
+print("1.Addition")
+print("2.Substration")
+print("3.Multiplication")
+print("4.Division")
+print("5.Average")
+print("6.Square")
+print("7.Cube")
+op = int(input())
 
-def add(p, q):
-    return p + q
-
-def sub(p, q):
-    return p - q
-
-def mul(p, q):
-    return p * q
-
-def div(p, q):
-    return p / q
-    
-def sq(p):
-    return p**2
-
-def cube(p):
-    return p**3
-
-def sqrt(p):
-    return p**0.5
-
-def cbrt(p):
-    return p**(1/3)
-
-def expo(p, n):
-    return p**n
-
-def fact(p):
-    if p == 0:
-        return 1
+if(op==1):
+    sum = num1 + num2
+    print(f"Additon of {num1} and {num2} is {sum}") #This is an another method to print string and variable together using f-string of python
+elif(op==2):
+    sub = num1 - num2
+    print(f"Substration of {num1} and {num2} is {sub}")
+elif(op==3):
+    mul = num1 * num2
+    print("Multiplication of " + str(num1)+ " and " +str(num2)+ " is " +str(mul) )  #Here we have used str() function to convert integer to string and used in a print statement to print it properly
+elif(op==4):
+    if(num1 > num2):
+        div = num1/num2
     else:
-        return p * fact(p-1)
-
-def main():
-    while True:
-        print("\n1. Addition")
-        print("2. Subtraction")
-        print("3. Multiplication")
-        print("4. Division")
-        print("5. Square")
-        print("6. Cube")
-        print("7. Square Root")
-        print("8. Cube Root")
-        print("9. Exponential")
-        print("10. Factorial")
-        print("11. Exit")
-        
-        choice = int(input("Enter your choice: "))
-        
-        if choice == 11:
-            break
-        elif choice == 1:
-            num1 = int(input("Enter the first number: "))
-            num2 = int(input("Enter the second number: "))
-            print("The sum is: ", add(num1, num2))
-        elif choice == 2:
-            num1 = int(input("Enter the first number: "))
-            num2 = int(input("Enter the second number: "))
-            print("The difference is: ", sub(num1, num2))
-        elif choice == 3:
-            num1 = int(input("Enter the first number: "))
-            num2 = int(input("Enter the second number: "))
-            print("The product is: ", mul(num1, num2))
-        elif choice == 4:
-            num1 = int(input("Enter the first number: "))
-            num2 = int(input("Enter the second number: "))
-            if(num2 == 0):
-                return print("Denominator cannot be zero !!")
-            else:
-                print("The division is: ", div(num1, num2))
-        elif choice == 5:
-            num = int(input("Enter the number: "))
-            print("The square is: ", sq(num))
-        elif choice == 6:
-            num = int(input("Enter the number: "))
-            print("The cube is: ", cube(num))
-        elif choice == 7:
-            num = int(input("Enter the number: "))
-            print("The square root is: ", sqrt(num))
-        elif choice == 8:
-            num = int(input("Enter the number: "))
-            print("The cube root is: ", cbrt(num))
-        elif choice == 9:
-            num1 = int(input("Enter the base: "))
-            num2 = int(input("Enter the power: "))
-            print("The result is: ", expo(num1, num2))
-        elif choice == 10:
-            num = int(input("Enter the number: "))
-            print("The factorial is: ", fact(num))
-        else:
-            print("Invalid choice !!")
-        
-if __name__ == "__main__":
-    main()
+        div = num2/num1
+    print(f"Division of {num1} and {num2} is {div}")
+elif(op==5):
+    avg = (num1+num2)/2
+    print(f"Average of {num1} and {num2} is {avg}")
+elif(op==6):
+    square1 = num1**2
+    square2 = num2**2
+    print(f"Square of {num1} is {square1}")
+    print(f"Square of {num2} is {square2}")
+elif(op==7):
+    cube1 = num1**3
+    cube2 = num2**3
+    print(f"Cube of {num1} is {cube1}")
+    print(f"Cube of {num2} is {cube2}")
+else:
+    print("Invalid operator")
